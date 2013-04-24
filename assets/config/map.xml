@@ -1,0 +1,118 @@
+ <root>
+	<map id="1" type="1" hx="1" hy="1" hh="1" hw="2" bg="1" step="3">
+		<block id="7" shuipin="1" fanzhuan="2" x="2" y="1" finalX="3" finalY="1" finalSp="0" finalFz="3"/>
+		<block id="2" shuipin="0" fanzhuan="3" x="1" y="2" finalX="1" finalY="2" finalSp="0" finalFz="3"/>
+		<block id="3" shuipin="0" fanzhuan="0" x="2" y="2" finalX="2" finalY="2" finalSp="0" finalFz="3"/>
+	</map>
+	<map id="2" type="1" hx="3" hy="1" hh="1" hw="2" bg="1" step="3">
+		<block id="3" shuipin="0" fanzhuan="2" x="2" y="1" finalX="2" finalY="2" finalSp="0" finalFz="0"/>
+		<block id="4" shuipin="0" fanzhuan="0" x="1" y="4" finalX="1" finalY="4" finalSp="0" finalFz="0"/>
+		<block id="5" shuipin="1" fanzhuan="1" x="1" y="2" finalX="1" finalY="1" finalSp="1" finalFz="0"/>
+	</map>
+	<map id="3" type="1" hx="3" hy="1" hh="1" hw="2" bg="1" step="4">
+		<block id="3" shuipin="0" fanzhuan="3" x="1" y="1" finalX="1" finalY="1" finalSp="0" finalFz="1"/>
+		<block id="5" shuipin="1" fanzhuan="0" x="3" y="1" finalX="2" finalY="2" finalSp="0" finalFz="1"/>
+		<block id="12" shuipin="1" fanzhuan="0" x="1" y="3" finalX="1" finalY="3" finalSp="0" finalFz="0"/>
+	</map>
+	<map id="4" type="2" hx="3" hy="4" hh="1" hw="2" bg="1" step="4">
+		<block id="5" shuipin="1" fanzhuan="0" x="1" y="1" finalX="1" finalY="1" finalSp="0" finalFz="1"/>
+		<block id="7" shuipin="0" fanzhuan="3" x="3" y="1" finalX="3" finalY="1" finalSp="1" finalFz="3"/>
+		<block id="6" shuipin="0" fanzhuan="0" x="2" y="3" finalX="1" finalY="3" finalSp="0" finalFz="0"/>
+	</map>
+	
+	<map id="5" type="2" hx="3" hy="1" hh="1" hw="2" bg="2" step="5">
+		<block id="7" shuipin="1" fanzhuan="3" x="1" y="1" finalX="1" finalY="2" finalSp="0" finalFz="2"/>
+		<block id="8" shuipin="0" fanzhuan="0" x="2" y="2" finalX="2" finalY="2" finalSp="0" finalFz="3"/>
+		<block id="1" shuipin="0" fanzhuan="1" x="4" y="1" finalX="1" finalY="4" finalSp="0" finalFz="0"/>
+	</map>
+	
+	<map id="6" type="1" hx="2" hy="1" hh="1" hw="2" bg="2" step="5">
+		<block id="6" shuipin="0" fanzhuan="0" x="1" y="1" finalX="1" finalY="2" finalSp="0" finalFz="0"/>
+		<block id="5" shuipin="0" fanzhuan="0" x="3" y="1" finalX="3" finalY="1" finalSp="1" finalFz="0"/>
+		<block id="7" shuipin="0" fanzhuan="0" x="1" y="3" finalX="2" finalY="3" finalSp="0" finalFz="0"/>
+	</map>
+	
+	<map id="7" type="1" hx="2" hy="4" hh="1" hw="2" bg="2" step="5">
+		<block id="9" shuipin="1" fanzhuan="3" x="1" y="1" finalX="1" finalY="1" finalSp="0" finalFz="3"/>
+		<block id="7" shuipin="1" fanzhuan="2" x="2" y="1" finalX="2" finalY="1" finalSp="0" finalFz="2"/>
+		<block id="10" shuipin="1" fanzhuan="2" x="2" y="3" finalX="3" finalY="2" finalSp="0" finalFz="3"/>
+	</map>
+	
+	<map id="8" type="1" hx="1" hy="1" hh="1" hw="2" bg="2">
+		<block id="12" shuipin="0" fanzhuan="1" x="1" y="1" finalX="1" finalY="3" finalSp="1" finalFz="0"/>
+		<block id="1" shuipin="0" fanzhuan="0" x="2" y="1" finalX="1" finalY="2" finalSp="0" finalFz="0"/>
+		<block id="2" shuipin="0" fanzhuan="0" x="2" y="2" finalX="3" finalY="1" finalSp="0" finalFz="1"/>
+	</map>
+	
+	<map id="9" type="3" hx="4" hy="4" hh="2" hw="1" bg="1">
+		<block id="2" shuipin="0" fanzhuan="1" x="1" y="1" finalX="1" finalY="2" finalSp="0" finalFz="3"/>
+		<block id="11" shuipin="1" fanzhuan="0" x="3" y="1" finalX="1" finalY="1" finalSp="0" finalFz="1"/>
+		<block id="8" shuipin="0" fanzhuan="3" x="1" y="3" finalX="2" finalY="3" finalSp="0" finalFz="2"/>
+	</map>
+	
+	<map id="10" type="3" hx="1" hy="3" hh="2" hw="1" bg="1">
+		<block id="17" shuipin="1" fanzhuan="1" x="1" y="1" finalX="2" finalY="1" finalSp="0" finalFz="0"/>
+		<block id="11" shuipin="0" fanzhuan="3" x="1" y="3" finalX="1" finalY="1" finalSp="1" finalFz="0"/>
+		<block id="12" shuipin="1" fanzhuan="0" x="1" y="4" finalX="1" finalY="4" finalSp="0" finalFz="0"/>
+	</map>
+	
+	<map id="11" type="3" hx="1" hy="4" hh="2" hw="1" bg="1">
+		<block id="14" shuipin="0" fanzhuan="1" x="1" y="1" finalX="1" finalY="1" finalSp="0" finalFz="0"/>
+		<block id="2" shuipin="0" fanzhuan="3" x="1" y="3" finalX="2" finalY="3" finalSp="0" finalFz="1"/>
+		<block id="12" shuipin="0" fanzhuan="3" x="3" y="1" finalX="3" finalY="2" finalSp="0" finalFz="3"/>
+	</map>
+	
+	<map id="12" type="2" hx="1" hy="4" hh="1" hw="2" bg="1">
+		<block id="7" shuipin="1" fanzhuan="0" x="1" y="2" finalX="2" finalY="1" finalSp="1" finalFz="2"/>
+		<block id="1" shuipin="0" fanzhuan="0" x="2" y="2" finalX="1" finalY="2" finalSp="0" finalFz="0"/>
+		<block id="12" shuipin="0" fanzhuan="0" x="1" y="3" finalX="1" finalY="3" finalSp="1" finalFz="2"/>
+	</map>
+	
+	<map id="13" type="3" hx="1" hy="4" hh="2" hw="1" bg="1">
+		<block id="8" shuipin="0" fanzhuan="0" x="1" y="1" finalX="1" finalY="1" finalSp="0" finalFz="1"/>
+		<block id="2" shuipin="0" fanzhuan="1" x="3" y="2" finalX="3" finalY="1" finalSp="0" finalFz="1"/>
+		<block id="10" shuipin="1" fanzhuan="0" x="1" y="4" finalX="2" finalY="4" finalSp="0" finalFz="0"/>
+	</map>
+	
+	<map id="14" type="1" hx="3" hy="1" hh="1" hw="2" bg="1">
+		<block id="15" shuipin="0" fanzhuan="1" x="2" y="1" finalX="4" finalY="3" finalSp="0" finalFz="1"/>
+		<block id="16" shuipin="1" fanzhuan="2" x="1" y="2" finalX="1" finalY="2" finalSp="1" finalFz="2"/>
+		<block id="11" shuipin="1" fanzhuan="0" x="3" y="1" finalX="1" finalY="1" finalSp="0" finalFz="3"/>
+	</map>
+	
+	<map id="15" type="3" hx="1" hy="2" hh="2" hw="2" bg="1">
+		<block id="18" shuipin="0" fanzhuan="1" x="1" y="1" finalX="2" finalY="3" finalSp="1" finalFz="0"/>
+		<block id="5" shuipin="0" fanzhuan="1" x="2" y="2" finalX="2" finalY="1" finalSp="1" finalFz="1"/>
+		<block id="17" shuipin="0" fanzhuan="1" x="2" y="3" finalX="1" finalY="3" finalSp="0" finalFz="1"/>
+	</map>
+	
+	<map id="16" type="1" hx="1" hy="2" hh="1" hw="2" bg="1">
+		<block id="11" shuipin="1" fanzhuan="0" x="1" y="1" finalX="1" finalY="3" finalSp="0" finalFz="1"/>
+		<block id="15" shuipin="0" fanzhuan="1" x="3" y="3" finalX="1" finalY="4" finalSp="0" finalFz="0"/>
+		<block id="14" shuipin="0" fanzhuan="1" x="2" y="1" finalX="2" finalY="1" finalSp="0" finalFz="1"/>
+	</map>
+	
+	<map id="17" type="2" hx="1" hy="2" hh="1" hw="2" bg="2">
+		<block id="7" shuipin="1" fanzhuan="1" x="2" y="1" finalX="2" finalY="1" finalSp="0" finalFz="3"/>
+		<block id="5" shuipin="1" fanzhuan="0" x="3" y="1" finalX="1" finalY="3" finalSp="1" finalFz="3"/>
+		<block id="4" shuipin="0" fanzhuan="0" x="1" y="4" finalX="4" finalY="1" finalSp="0" finalFz="1"/>
+	</map>
+	
+	<map id="18" type="2" hx="2" hy="3" hh="1" hw="2" bg="2">
+		<block id="15" shuipin="0" fanzhuan="0" x="3" y="1" finalX="3" finalY="1" finalSp="0" finalFz="0"/>
+		<block id="17" shuipin="1" fanzhuan="1" x="1" y="2" finalX="2" finalY="1" finalSp="1" finalFz="1"/>
+		<block id="18" shuipin="0" fanzhuan="2" x="2" y="2" finalX="1" finalY="2" finalSp="0" finalFz="0"/>
+	</map>
+	
+	<map id="19" type="2" hx="3" hy="1" hh="1" hw="2" bg="2">
+		<block id="7" shuipin="1" fanzhuan="3" x="1" y="1" finalX="3" finalY="2" finalSp="1" finalFz="3"/>
+		<block id="5" shuipin="0" fanzhuan="0" x="3" y="1" finalX="1" finalY="3" finalSp="0" finalFz="1"/>
+		<block id="3" shuipin="0" fanzhuan="0" x="2" y="3" finalX="1" finalY="1" finalSp="0" finalFz="0"/>
+	</map>
+	
+	<map id="20" type="3" hx="1" hy="1" hh="1" hw="2" bg="1">
+		<block id="12" shuipin="1" fanzhuan="2" x="1" y="1" finalX="1" finalY="2" finalSp="1" finalFz="1"/>
+		<block id="13" shuipin="0" fanzhuan="1" x="1" y="2" finalX="2" finalY="1" finalSp="1" finalFz="1"/>
+		<block id="7" shuipin="0" fanzhuan="1" x="3" y="2" finalX="3" finalY="3" finalSp="1" finalFz="3"/>
+	</map>
+</root>

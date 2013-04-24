@@ -1,0 +1,6 @@
+<root>
+	<bmp name="Light">
+		<a name="effect" fps="12" width="400" height="400" count="3" startX="0"
+			startY="0" />
+	</bmp>
+</root>
