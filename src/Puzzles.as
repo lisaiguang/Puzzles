@@ -72,7 +72,7 @@ package
 					bmp.scaleX = StaticTable.SCALE_X;
 					bmp.scaleY = StaticTable.SCALE_Y;
 					addChild(bmp);
-					TweenLite.delayedCall(2, function():void{MidLayer.ShowWindow(MenuView);removeChild(bmp);}, [bmp]);
+					TweenLite.delayedCall(2, function():void{MidLayer.ShowWindow(MenuView);removeChild(bmp);});
 				}
 		}
 	}

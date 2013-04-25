@@ -13,6 +13,7 @@ package data
 			if(!cookies.data.levelId)cookies.data.levelId=1;
 			if(!cookies.data.unlocklevelId)cookies.data.unlocklevelId=1;
 			if(!cookies.data.newbie)MiniBuffer.cookies.data.newbie=false;
+			if(!cookies.data.purchased)MiniBuffer.cookies.data.purchased=[];
 		}
 	}
 }

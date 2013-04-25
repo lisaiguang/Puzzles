@@ -16,63 +16,64 @@ package view.blocks
 		}
 		
 		import com.greensock.TweenLite;
-	import com.urbansquall.ginger.AnimationBmp;
-	
-	import flash.display.Bitmap;
-	import flash.display.BitmapData;
-	import flash.display.DisplayObject;
-	import flash.display.Sprite;
-	import flash.events.Event;
-	import flash.events.MouseEvent;
-	import flash.geom.Rectangle;
-	
-	import data.MiniBuffer;
-	import data.StaticTable;
-	import data.staticObj.BlockDesc;
-	import data.staticObj.EnumMusic;
-	import data.staticObj.MapDesc;
-	
-	import lsg.bmp.featureArea;
-	import lsg.bmp.hongshu;
-	import lsg.bmp.hongshu1;
-	import lsg.bmp.hongshu2;
-	import lsg.bmp.hongshu3;
-	import lsg.bmp.newbie1;
-	import lsg.bmp.newbie2;
-	import lsg.btn.BtnJiemi;
-	import lsg.btn.BtnMenu;
-	import lsg.btn.BtnReset;
-	
-	import music.SoundPlayer;
-	
-	import utils.LazySprite;
-	
-	import view.blocks.block.Block;
-	import view.blocks.block.Block1;
-	import view.blocks.block.Block10;
-	import view.blocks.block.Block11;
-	import view.blocks.block.Block12;
-	import view.blocks.block.Block13;
-	import view.blocks.block.Block14;
-	import view.blocks.block.Block15;
-	import view.blocks.block.Block16;
-	import view.blocks.block.Block17;
-	import view.blocks.block.Block18;
-	import view.blocks.block.Block2;
-	import view.blocks.block.Block3;
-	import view.blocks.block.Block4;
-	import view.blocks.block.Block5;
-	import view.blocks.block.Block6;
-	import view.blocks.block.Block7;
-	import view.blocks.block.Block8;
-	import view.blocks.block.Block9;
-	import view.menu.MenuView;
-	import view.help.FinishView;
-	import lsg.bmp.bg31;
-	import lsg.bmp.bg22;
-	import lsg.bmp.bg21;
-	import lsg.bmp.bg11;
-	import lsg.bmp.bg12;
+		import com.urbansquall.ginger.AnimationBmp;
+		
+		import flash.display.Bitmap;
+		import flash.display.BitmapData;
+		import flash.display.DisplayObject;
+		import flash.display.Sprite;
+		import flash.events.Event;
+		import flash.events.MouseEvent;
+		import flash.geom.Matrix;
+		import flash.geom.Rectangle;
+		
+		import data.MiniBuffer;
+		import data.StaticTable;
+		import data.staticObj.BlockDesc;
+		import data.staticObj.EnumMusic;
+		import data.staticObj.MapDesc;
+		
+		import lsg.bmp.bg11;
+		import lsg.bmp.bg12;
+		import lsg.bmp.bg21;
+		import lsg.bmp.bg22;
+		import lsg.bmp.bg31;
+		import lsg.bmp.featureArea;
+		import lsg.bmp.hongshu;
+		import lsg.bmp.hongshu1;
+		import lsg.bmp.hongshu2;
+		import lsg.bmp.hongshu3;
+		import lsg.bmp.newbie1;
+		import lsg.bmp.newbie2;
+		import lsg.btn.BtnJiemi;
+		import lsg.btn.BtnMenu;
+		import lsg.btn.BtnReset;
+		
+		import music.SoundPlayer;
+		
+		import utils.LazySprite;
+		
+		import view.blocks.block.Block;
+		import view.blocks.block.Block1;
+		import view.blocks.block.Block10;
+		import view.blocks.block.Block11;
+		import view.blocks.block.Block12;
+		import view.blocks.block.Block13;
+		import view.blocks.block.Block14;
+		import view.blocks.block.Block15;
+		import view.blocks.block.Block16;
+		import view.blocks.block.Block17;
+		import view.blocks.block.Block18;
+		import view.blocks.block.Block2;
+		import view.blocks.block.Block3;
+		import view.blocks.block.Block4;
+		import view.blocks.block.Block5;
+		import view.blocks.block.Block6;
+		import view.blocks.block.Block7;
+		import view.blocks.block.Block8;
+		import view.blocks.block.Block9;
+		import view.help.FinishView;
+		import view.menu.MenuView;
 	
 	public class BlocksView extends LazySprite
 	{
@@ -107,6 +108,8 @@ package view.blocks
 			addChild(_btnMenu);
 			_btnMenu.addEventListener(MouseEvent.CLICK, onMenu);
 			_btnMenu.addEventListener(MouseEvent.MOUSE_DOWN, onStopEvent);
+			_btnMenu.cacheAsBitmap=true;
+			_btnMenu.cacheAsBitmapMatrix=new Matrix;
 			
 			_btnReset = new BtnReset;
 			_btnReset.x = _btnMenu.x - _btnReset.width - _buttonPaddingLeft;
@@ -114,6 +117,8 @@ package view.blocks
 			addChild(_btnReset);
 			_btnReset.addEventListener(MouseEvent.CLICK, onReset);
 			_btnReset.addEventListener(MouseEvent.MOUSE_DOWN, onStopEvent);
+			_btnReset.cacheAsBitmap=true;
+			_btnReset.cacheAsBitmapMatrix=new Matrix;
 			
 			CONFIG::ios
 				{
@@ -128,8 +133,16 @@ package view.blocks
 					productStore.addEventListener(TransactionEvent.PURCHASE_TRANSACTION_FAIL, purchaseTransactionFailed);
 					productStore.addEventListener(ProductEvent.PRODUCT_DETAILS_SUCCESS,productDetailsSucceeded);
 					productStore.addEventListener(ProductEvent.PRODUCT_DETAILS_FAIL, productDetailsFailed);
-					var vector:Vector.<String>=new <String>["weiyou.jiemi"];
-					TweenLite.delayedCall(2, productStore.requestProductsDetails, [vector]);
+					
+					if(MiniBuffer.cookies.data.purchased.indexOf(id)==-1)
+					{
+						var vector:Vector.<String>=new <String>["weiyou.jiemi"];
+						TweenLite.delayedCall(2, productStore.requestProductsDetails, [vector]);
+					}
+					else
+					{
+						addChild(_btnJiemi);
+					}
 					
 					if(sUI.isSupported)
 					{
@@ -200,9 +213,16 @@ package view.blocks
 				protected function onJiemi(event:MouseEvent):void
 				{
 					StaticTable.GetSoundPlayer(EnumMusic.CLICK).play();
-					MidLayer.DisableMouse();
-					MidLayer.ShowWindow(WaitingView);
-					productStore.makePurchaseTransaction("weiyou.jiemi",1);
+					if(MiniBuffer.cookies.data.purchased.indexOf(_mapDesc.id)==-1)
+					{
+						MidLayer.DisableMouse();
+						MidLayer.ShowWindow(WaitingView);
+						productStore.makePurchaseTransaction("weiyou.jiemi",1);
+					}
+					else
+					{
+						jiemi();
+					}
 				}
 				
 				private var productStore:ProductStore = new ProductStore;
@@ -229,8 +249,15 @@ package view.blocks
 				
 				protected function purchaseTransactionSucceeded(event:TransactionEvent):void
 				{
+					MiniBuffer.cookies.data.purchased.push(_mapDesc.id);
+					MiniBuffer.cookies.flush();
 					MidLayer.EnableMouse();
 					MidLayer.CloseWindow(WaitingView);
+					jiemi();
+				}
+				
+				protected function jiemi():void
+				{
 					for(var i:int = 0; i < _mapDesc.blocks.length; i++)
 					{
 						var blockDesc:BlockDesc = _mapDesc.blocks[i];
@@ -247,7 +274,6 @@ package view.blocks
 						putBlockIn(block, blockDesc.finalX - 1, blockDesc.finalY - 1);
 					}
 					showSuccess();
-					event.stopPropagation();
 				}
 			}
 			
@@ -465,6 +491,7 @@ package view.blocks
 			hsBmp.y = -hsBmp.height*.5;
 			hs=new Sprite;
 			hs.addChild(hsBmp);
+			hs.cacheAsBitmap=true;
 			
 			var offsetX:Number=1, offsetY:Number=0.5;
 			if(_mapDesc.hh == 2 && _mapDesc.hw == 1)
@@ -497,6 +524,8 @@ package view.blocks
 				putBlockIn(block, blockDesc.x - 1, blockDesc.y - 1);
 				_blocks.push(block);
 				block.mouseChildren = block.mouseEnabled = false;
+				block.cacheAsBitmap=true;
+				block.cacheAsBitmapMatrix=new Matrix;
 				TweenLite.from(block, .4, {rotation:Math.random()*180, z:-600, delay:.75 + i*.2});
 			}
 			
@@ -709,7 +738,7 @@ package view.blocks
 								
 								_curBlock = block;
 								_curBlock.up();
-								addChild(_curBlock);
+								setChildIndex(_curBlock, numChildren-1);
 								for(var g:int = 0; g < positions.length; g+=2)
 								{
 									_poses[_curBlock.gridX + positions[g] - 1][_curBlock.gridY + positions[g+1] - 1]=true;
